@@ -1,0 +1,26 @@
+.container {
+    padding: 4rem 1.5rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: var(--color-text-muted);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
