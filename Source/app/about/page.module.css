@@ -1,0 +1,118 @@
+.container {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+
+.heroContent h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heroContent p {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.imageWrapper {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    height: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 8rem;
+    text-align: center;
+    background: var(--color-surface);
+    padding: 4rem;
+    border-radius: var(--radius-lg);
+}
+
+.statItem h3 {
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.statItem p {
+    color: var(--color-text-muted);
+}
+
+.values {
+    margin-bottom: 6rem;
+}
+
+.values h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-family: var(--font-heading);
+}
+
+.valueGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.valueCard {
+    background: var(--color-surface);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--color-border);
+}
+
+.valueCard:hover {
+    transform: translateY(-5px);
+}
+
+.valueCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.valueCard p {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .heroContent h1 {
+        font-size: 2.5rem;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+}
