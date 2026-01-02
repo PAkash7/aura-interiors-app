@@ -1,0 +1,93 @@
+:root {
+  /* Premium Color Palette */
+  --font-sans: 'Inter', sans-serif;
+
+  --color-primary: #1A1A1A;
+  /* Deep Charcoal */
+  --color-secondary: #2D2D2D;
+  /* Dark Gray */
+  --color-accent: #C5A065;
+  /* Gold/Bronze */
+  --color-accent-light: #E0C090;
+  --color-background: #FAFAFA;
+  /* Off-white */
+  --color-surface: #2c5326;
+  --color-text: #1A1A1A;
+  --color-text-muted: #404040;
+  --color-border: #396b64;
+
+  /* Shadows & Glassmorphism */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+  --glass-bg: rgba(186, 29, 214, 0.792);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-blur: blur(16px);
+
+  /* Typography enhancements */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #36aec3;
+    --color-background: #0e5972;
+    --color-surface: #1E1E1E;
+    --color-text: #FAFAFA;
+    --color-text-muted: #CCCCCC;
+    --color-border: #444444;
+    --glass-bg: rgba(20, 20, 20, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.15);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  /* The "Glow" - Subtle gradient mesh */
+  background-image:
+    radial-gradient(at 0% 0%, rgba(45, 212, 191, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.1) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.layout-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
