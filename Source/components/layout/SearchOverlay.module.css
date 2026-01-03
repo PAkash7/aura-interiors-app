@@ -1,0 +1,77 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+}
+
+.searchContainer {
+    background: var(--color-surface);
+    width: 90%;
+    max-width: 600px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.input {
+    flex: 1;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    margin-left: 1rem;
+    color: var(--color-text);
+    background: transparent;
+}
+
+.results {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.suggestionItem {
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--color-text);
+}
+
+.suggestionItem:hover {
+    background: var(--color-background);
+}
+
+.suggestionType {
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: white;
+    cursor: pointer;
+}

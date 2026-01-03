@@ -1,0 +1,101 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+}
+
+@keyframes jelly {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.button:active {
+    animation: jelly 0.5s ease;
+}
+
+/* Base hover expansion for all buttons for that 'bubble' feel */
+.button:hover {
+    transform: scale(1.05);
+}
+
+.primary {
+    background-color: var(--color-accent);
+    /* Vibrant Teal */
+    color: #0f172a;
+    /* Dark text for contrast against teal */
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 4px 14px 0 rgba(45, 212, 191, 0.39);
+}
+
+.primary:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-accent-light);
+    border-color: var(--color-accent-light);
+    box-shadow: 0 6px 20px rgba(45, 212, 191, 0.23);
+}
+
+.secondary {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+
+.secondary:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background-color: rgba(45, 212, 191, 0.05);
+}
+
+.outline {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+}
+
+.outline:hover {
+    background-color: var(--color-text);
+    color: var(--color-background);
+}
+
+.ghost {
+    background-color: transparent;
+    color: var(--color-text-muted);
+    border: 1px solid transparent;
+}
+
+.ghost:hover {
+    color: var(--color-accent);
+    background-color: rgba(45, 212, 191, 0.1);
+}
+
+.fullWidth {
+    width: 100%;
+}
