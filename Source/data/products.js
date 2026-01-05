@@ -1,0 +1,78 @@
+export const products = [
+    {
+        id: 'p1',
+        name: "Velvet Lounge Sofa",
+        category: "Living Room",
+        price: 1299,
+        image: "/images/sofa-velvet.png",
+        tags: ["modern", "luxury", "velvet", "cozy", "blue"],
+        description: "A plush velvet sofa that defines comfort and elegance."
+    },
+    {
+        id: 'p2',
+        name: "Minimalist Oak Table",
+        category: "Dining",
+        price: 899,
+        image: "/images/table-oak.png",
+        tags: ["scandinavian", "minimalist", "wood", "natural"],
+        description: "Solid oak dining table with clean lines."
+    },
+    {
+        id: 'p3',
+        name: "Abstract Bronze Lamp",
+        category: "Lighting",
+        price: 249,
+        image: "/images/lamp-bronze.png",
+        tags: ["industrial", "artistic", "metal", "accent"],
+        description: "A statement lighting piece for modern interiors."
+    },
+    {
+        id: 'p4',
+        name: "Boho Woven Rug",
+        category: "Decor",
+        price: 150,
+        image: "/images/rug-boho.png",
+        tags: ["boho", "warm", "texture", "beige"],
+        description: "Hand-woven wool rug adding texture to any room."
+    },
+    {
+        id: 'p5',
+        name: "Mid-Century Armchair",
+        category: "Living Room",
+        price: 650,
+        image: "/images/chair-midmod.png",
+        tags: ["retro", "mid-century", "leather", "classic"],
+        description: "Iconic mid-century design with premium leather upholstery."
+    },
+    {
+        id: 'p6',
+        name: "Modern Leather Recliner",
+        category: "Living Room",
+        price: 1450,
+        image: "/images/recliner-leather.png",
+        tags: ["modern", "leather", "comfort", "luxury", "brown"],
+        description: "A sleek modern brown leather recliner perfect for reading corners."
+    },
+    {
+        id: 'p7',
+        name: "Marble Coffee Table",
+        category: "Living Room",
+        price: 550,
+        image: "/images/table-marble.png",
+        tags: ["luxury", "modern", "marble", "gold", "white"],
+        description: "Round Carrara marble coffee table with gold accents."
+    },
+    {
+        id: 'p8',
+        name: "Art Deco Chandelier",
+        category: "Lighting",
+        price: 890,
+        image: "/images/chandelier-deco.png",
+        tags: ["luxury", "vintage", "art deco", "glam", "gold"],
+        description: "Grand crystal chandelier inspired by the roaring 20s."
+    }
+];
+
+export const getProductsByTag = (tag) => {
+    return products.filter(p => p.tags.some(t => t.includes(tag.toLowerCase())));
+}
